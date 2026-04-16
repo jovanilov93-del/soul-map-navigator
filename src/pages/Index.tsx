@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StarField from "@/components/StarField";
 import heroImage from "@/assets/hero-astrology.jpg";
-import portraitImage from "@/assets/elizabeta-portrait.jpg";
+import portraitImage from "@/assets/elizabeta-portrait.png";
 import { Star, Moon, Sun, Sparkles, Calendar, FileText, Headphones, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 

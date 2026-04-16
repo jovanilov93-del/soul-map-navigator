@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StarField from "@/components/StarField";
-import portraitImage from "@/assets/elizabeta-portrait.jpg";
+import portraitImage from "@/assets/elizabeta-portrait.png";
 
 const About = () => (
   <>
