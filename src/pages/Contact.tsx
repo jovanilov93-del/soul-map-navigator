@@ -7,6 +7,10 @@ import { Textarea } from "@/components/ui/textarea";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const whatsappUrl = "https://wa.me/38970000000";
+  const viberUrl = "viber://chat?number=%2B38970000000";
+  const facebookUrl = "https://facebook.com/profile.php?id=61576409987372";
+  const instagramUrl = "https://instagram.com/whisperingstars.mk";
 
   return (
     <>
@@ -41,13 +45,23 @@ const Contact = () => {
                 <label className="text-sm font-medium mb-2 block">Порака</label>
                 <Textarea placeholder="Напиши ја твојата порака..." rows={5} required />
               </div>
+              <div>
+                <label className="text-sm font-medium mb-2 block">Телефон / Viber (опционално)</label>
+                <Input placeholder="+389 7X XXX XXX" />
+              </div>
               <Button variant="gold" className="w-full" type="submit">Испрати</Button>
             </form>
           )}
 
           <div className="mt-12 text-center space-y-2">
-            <p className="text-muted-foreground text-sm">📧 info@elizabeta-astro.com</p>
-            <p className="text-muted-foreground text-sm">📸 @elizabeta.astro</p>
+            <p className="text-muted-foreground text-sm">📧 info@shepotot.mk</p>
+            <p className="text-muted-foreground text-sm">📸 @whisperingstars.mk</p>
+            <div className="flex flex-wrap items-center justify-center gap-3 pt-3">
+              <a href={viberUrl} className="text-gold hover:text-gold-light transition-colors text-sm">Пиши ни на Viber</a>
+              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="text-gold hover:text-gold-light transition-colors text-sm">Пиши на WhatsApp</a>
+              <a href={facebookUrl} target="_blank" rel="noreferrer" className="text-gold hover:text-gold-light transition-colors text-sm">Facebook</a>
+              <a href={instagramUrl} target="_blank" rel="noreferrer" className="text-gold hover:text-gold-light transition-colors text-sm">Instagram</a>
+            </div>
           </div>
         </div>
       </main>

@@ -11,8 +11,8 @@ const About = () => (
       <section className="relative gradient-hero pt-32 pb-24 overflow-hidden">
         <StarField />
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <img src={portraitImage} alt="Елизабета" loading="lazy" width={768} height={1024} className="w-40 h-40 rounded-full object-cover mx-auto mb-8 border-2 border-gold/30 shadow-xl" />
-          <h1 className="font-heading text-5xl md:text-6xl font-bold text-cream mb-4">Елизабета</h1>
+          <img src={portraitImage} alt="Шепотот на ѕвездите" loading="lazy" width={768} height={1024} className="w-40 h-40 rounded-full object-cover mx-auto mb-8 border-2 border-gold/30 shadow-xl" />
+          <h1 className="font-heading text-5xl md:text-6xl font-bold text-cream mb-4">Шепотот на ѕвездите</h1>
           <p className="text-cream/60 font-heading text-xl italic max-w-lg mx-auto">
             "Ѕвездите не одредуваат — тие осветлуваат."
           </p>

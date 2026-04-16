@@ -8,26 +8,35 @@ const packages = [
   {
     tag: null,
     title: "Основна анализа",
-    price: "35€",
+    price: "35€ (≈2.150 ден.)",
     color: "border-border",
-    features: ["Натална карта (кратка)", "PDF (10-15 страни)", "Без консултација"],
+    details: "Фокус на личност, таленти и тековни предизвици.",
+    format: "PDF извештај (10-15 страни)",
+    delivery: "Испорака: 3-5 работни дена",
+    features: ["Натална карта (кратка)", "Пишан извештај", "Без консултација"],
     icon: FileText,
     highlight: false,
   },
   {
     tag: "Best Seller",
     title: "Детална анализа",
-    price: "70€",
+    price: "70€ (≈4.300 ден.)",
     color: "border-gold",
-    features: ["Натална карта (детално)", "PDF + аудио објаснување", "30 мин консултација"],
+    details: "Најбалансиран пакет за длабока лична насока.",
+    format: "PDF + аудио објаснување",
+    delivery: "Испорака: 3-5 работни дена",
+    features: ["Натална карта (детално)", "30 мин консултација", "Практични препораки"],
     icon: Headphones,
     highlight: true,
   },
   {
     tag: "Premium",
     title: "Премиум водство",
-    price: "120€",
+    price: "120€ (≈7.380 ден.)",
     color: "border-gold/50",
+    details: "Комплетен увид за тековен период и следни чекори.",
+    format: "Детален PDF + Zoom/аудио консултација",
+    delivery: "Испорака: 4-6 работни дена",
     features: ["Натална + транзити", "Прогресии", "60 мин консултација", "Персонални насоки"],
     icon: Video,
     highlight: false,
@@ -35,9 +44,12 @@ const packages = [
   {
     tag: null,
     title: "Синастрија",
-    price: "80€",
+    price: "80€ (≈4.920 ден.)",
     color: "border-border",
-    features: ["Анализа на двајца", "PDF извештај", "30 мин консултација"],
+    details: "Компатибилност и динамика во односот.",
+    format: "PDF извештај + консултација",
+    delivery: "Испорака: 3-5 работни дена",
+    features: ["Анализа на двајца", "Емоционална + комуникациска динамика", "30 мин консултација"],
     icon: Star,
     highlight: false,
   },
@@ -74,6 +86,9 @@ const Services = () => (
               </div>
               <h3 className="font-heading text-xl font-semibold mb-2">{pkg.title}</h3>
               <p className="font-heading text-4xl font-bold text-gold mb-6">{pkg.price}</p>
+              <p className="text-sm text-muted-foreground mb-3">{pkg.details}</p>
+              <p className="text-sm text-muted-foreground mb-1">{pkg.format}</p>
+              <p className="text-sm text-gold/90 mb-4">{pkg.delivery}</p>
               <ul className="space-y-3 mb-8 flex-1">
                 {pkg.features.map((f) => (
                   <li key={f} className="text-sm text-muted-foreground flex items-start gap-2">

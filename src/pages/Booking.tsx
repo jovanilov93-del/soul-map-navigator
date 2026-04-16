@@ -5,10 +5,10 @@ import Footer from "@/components/Footer";
 import { useState } from "react";
 
 const serviceOptions = [
-  { label: "Основна анализа – 35€", value: "basic" },
-  { label: "Детална анализа – 70€", value: "detailed" },
-  { label: "Премиум водство – 120€", value: "premium" },
-  { label: "Синастрија – 80€", value: "synastry" },
+  { label: "Основна анализа – 35€ (≈2.150 ден.)", value: "basic" },
+  { label: "Детална анализа – 70€ (≈4.300 ден.)", value: "detailed" },
+  { label: "Премиум водство – 120€ (≈7.380 ден.)", value: "premium" },
+  { label: "Синастрија – 80€ (≈4.920 ден.)", value: "synastry" },
 ];
 
 const Booking = () => {
@@ -63,10 +63,21 @@ const Booking = () => {
             <div className="text-center">
               <h2 className="font-heading text-2xl font-bold mb-6">Избери датум</h2>
               <p className="text-muted-foreground mb-8">
-                Интеграција со Calendly ќе биде додадена тука за избор на термин.
+                Резервирај директно преку календарот подолу или отвори го во нов прозорец.
               </p>
-              <div className="rounded-2xl border border-border p-12 bg-card mb-6">
-                <p className="text-muted-foreground">📅 Календар за резервации</p>
+              <div className="rounded-2xl border border-border p-3 bg-card mb-6">
+                <iframe
+                  title="Calendly booking"
+                  src="https://calendly.com/whisperingstarsmk/consultation?hide_gdpr_banner=1"
+                  className="w-full h-[700px] rounded-xl"
+                />
+              </div>
+              <div className="mb-6">
+                <Button variant="gold-outline" asChild>
+                  <a href="https://calendly.com/whisperingstarsmk/consultation" target="_blank" rel="noreferrer">
+                    Отвори Calendly во нов прозорец
+                  </a>
+                </Button>
               </div>
               <div className="flex gap-4">
                 <Button variant="gold-outline" className="flex-1" onClick={() => setStep(1)}>Назад</Button>
@@ -76,13 +87,28 @@ const Booking = () => {
           )}
 
           {step === 3 && (
-            <div className="text-center">
+            <div>
               <h2 className="font-heading text-2xl font-bold mb-6">Плаќање</h2>
-              <p className="text-muted-foreground mb-8">
-                Интеграција со Stripe / PayPal ќе биде додадена тука.
+              <p className="text-muted-foreground mb-6">
+                Избери ти најудобен начин на плаќање. По уплата, резервацијата се потврдува преку е-маил/Viber.
               </p>
-              <div className="rounded-2xl border border-border p-12 bg-card mb-6">
-                <p className="text-muted-foreground">💳 Систем за плаќање</p>
+              <div className="rounded-2xl border border-border p-6 bg-card mb-6 space-y-4">
+                <h3 className="font-heading text-xl">Опции за плаќање</h3>
+                <div className="grid gap-3">
+                  <Button variant="gold" asChild>
+                    <a href="https://buy.stripe.com/test_placeholder" target="_blank" rel="noreferrer">Плати со картичка (Stripe)</a>
+                  </Button>
+                  <Button variant="gold-outline" asChild>
+                    <a href="https://paypal.me/whisperingstarsmk" target="_blank" rel="noreferrer">Плати со PayPal</a>
+                  </Button>
+                </div>
+                <div className="text-left rounded-xl border border-border/70 p-4 text-sm text-muted-foreground">
+                  <p className="font-medium text-foreground mb-2">Банкарски трансфер (уплатница)</p>
+                  <p>Примач: Шепотот на ѕвездите</p>
+                  <p>Банка: [додади банка]</p>
+                  <p>Сметка: [додади сметка]</p>
+                  <p>Референца: Име + услуга</p>
+                </div>
               </div>
               <div className="flex gap-4">
                 <Button variant="gold-outline" className="flex-1" onClick={() => setStep(2)}>Назад</Button>

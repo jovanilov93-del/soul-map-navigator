@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Facebook, Instagram, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -12,6 +12,9 @@ const navLinks = [
   { label: "Контакт", href: "/contact" },
 ];
 
+const facebookUrl = "https://facebook.com/profile.php?id=61576409987372";
+const instagramUrl = "https://instagram.com/whisperingstars.mk";
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
@@ -20,7 +23,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-cosmic-deep/90 backdrop-blur-md border-b border-gold/10">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <Link to="/" className="font-heading text-2xl font-bold text-gold tracking-wide">
-          Елизабета
+          Шепотот на ѕвездите
         </Link>
 
         {/* Desktop */}
@@ -38,6 +41,12 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
+          <a href={facebookUrl} target="_blank" rel="noreferrer" className="text-cream/70 hover:text-gold transition-colors" aria-label="Facebook">
+            <Facebook size={18} />
+          </a>
+          <a href={instagramUrl} target="_blank" rel="noreferrer" className="text-cream/70 hover:text-gold transition-colors" aria-label="Instagram">
+            <Instagram size={18} />
+          </a>
           <Button variant="gold" size="sm" asChild>
             <Link to="/booking">Резервирај</Link>
           </Button>
@@ -69,6 +78,14 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
+          <div className="flex items-center gap-4 mt-4">
+            <a href={facebookUrl} target="_blank" rel="noreferrer" className="text-cream/70 hover:text-gold transition-colors" aria-label="Facebook">
+              <Facebook size={18} />
+            </a>
+            <a href={instagramUrl} target="_blank" rel="noreferrer" className="text-cream/70 hover:text-gold transition-colors" aria-label="Instagram">
+              <Instagram size={18} />
+            </a>
+          </div>
           <Button variant="gold" size="sm" className="mt-4 w-full" asChild>
             <Link to="/booking" onClick={() => setOpen(false)}>Резервирај</Link>
           </Button>
